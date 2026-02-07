@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mon premier Formulaire</h1>
+    <fieldset>
+        <legend>Vos coordonnées</legend>
+        <form action="tp2/destination.php" method="post">
+            <label for="nom">Nom* :</label>
+            <input type="text" id="nom" name="nom" required title="votre nom"><br><br>
+
+            <label for="prenom">Prénom*:</label>
+            <input type="text" id="prenom" name="prenom" required title="votre prénom"><br><br>
+
+            <label for="date">Date de naissance:</label>
+            <input type="date" id="date" name="date" title="votre date de naissance"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" title="votre email"><br><br>
+
+            <label for="site">Votre site :</label>
+            <input type="url" id="site" name="site" title="votre site" placeholder="http://www."><br><br>
+
+            <label for="code"> Code :</label>
+            <input type="password" id="code" name="code" pattern="[A-Z]{2}[0-9]{4}[a-z]{2}" size="40" minlength="8" title="Le code doit contenir 2 lettres majuscules, suivies de 4 chiffres et se terminer par 2 lettres minuscules"><br><br>
+            
+            <input type="radio" id="homme" name="sexe" value="homme">
+            <label for="homme">Homme</label><br><br>
+            <input type="radio" id="femme" name="sexe" value="femme">
+            <label for="femme">Femme</label><br><br>
+
+            <label for="pays">Pays :</label>
+            <select id="pays" name="pays" size="1" required>
+                <optgroup label="Afrique-de-nord">
+                    <option value="Tunisie">Tunisie</option>
+                    <option value="Algerie">Algerie</option>
+                    <option value="Lybie">Lybie</option>
+                    <option value="Marroc">Marroc</option>
+                    <option value="Egypt">Egypt</option>
+                </optgroup>
+
+                <optgroup label="Europe">
+                    <option value="France">France</option>
+                    <option value="Belgique">Belgique</option>
+                    <option value="Italie">Italie</option>
+                    <option value="Allemagne">Allemagne</option>
+                </optgroup>
+
+                <optgroup label="Amérique">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Argentine">Argentine</option>
+                    <option value="Mexique">Mexique</option>
+                </optgroup>     
+
+                <optgroup label="Autres">
+                    <option value="Afrique-de-sud">Afrique-de-sud</option>
+                    <option value="Asie">Asie</option>
+                    <option value="Océanie">Océanie</option>
+                    <option value="Australie">Australie</option>
+                </optgroup>
+            </select><br><br>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Vos goûts</legend>
+        <input type="checkbox" id="pommes" name="fruit" value="pommes">
+        <label for="pommes">Pommes</label><br>
+        <input type="checkbox" id="poires" name="fruit" value="poires">
+        <label for="poires">Poires</label><br>
+        <input type="checkbox" id="scoubidou" name="fruit" value="Scoubidou">
+        <label for="scoubidou">Scoubidou</label><br>
+        <textarea name="descrip" id="descrip" cols="50" rows="5" title="votre description" placeholder="Votre description ici... " onclick="this.value=''"></textarea>
+    </fieldset>
+    <fieldset>
+        <legend>Envoyez nous votre photo</legend>
+        <input type="file"  name="photo" accept="image/*" ><br><br>
+        
+        <input type="hidden" name="token" value="12345">
+
+
+    </fieldset>
+    <input type="reset" value="Effacer">
+    <input type="submit" value="Envoyer">
+</body>
+</html>
